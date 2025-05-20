@@ -36,3 +36,10 @@ git add . : The . means "add all changes" . We cn replace it with specific file 
 .gitignore : .gitignore file is a special configuration file used in Git repo to specify files 
             and directories that should be ignored by Git               
 git commit -m "Message you want to send" : it will send the message of changes
+
+dotenv : the dotenv module in NodeJs is used to manage configuration variables and sensitive information in 
+          our application
+          It's particularly useful for keeping sensitive data like API keys, database connection strings, port number and other environment_specific config seperate from our code 
+          npm install dotenv
+          - create a .env file 
+          - format : var_name = value:
