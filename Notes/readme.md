@@ -33,4 +33,6 @@ git init : run git init inside the root folder of our project
             This command tells Git to start tracking changes in our project folder
 git status : after making changes to our project , we'll want to save those changes in Git
 git add . : The . means "add all changes" . We cn replace it with specific file names if needed.
-.gitignore : .gitignore file is a special configuration file used in Git repo to specify files and directories that should be ignored by Git
+.gitignore : .gitignore file is a special configuration file used in Git repo to specify files 
+            and directories that should be ignored by Git               
+git commit -m "Message you want to send" : it will send the message of changes

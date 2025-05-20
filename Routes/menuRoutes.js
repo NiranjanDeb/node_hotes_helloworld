@@ -34,6 +34,5 @@ router.post('/', async(req,res)=>{
     res.status(500).json({ message: "Internal server error" });
   }
 })
-
-
+// comment added for git testing purpose
 export default router;
