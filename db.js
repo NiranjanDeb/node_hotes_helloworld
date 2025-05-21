@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // define the mongodb url
-// const mongoURL = process.env.MONGODB_URL_LOCAL; // Local MongoDB URL
-const mongoURL = process.env.MONGODB_URL; // Use environment variable or fallback to local URL
+const mongoURL = process.env.MONGODB_URL_LOCAL; // Local MongoDB URL
+// const mongoURL = process.env.MONGODB_URL; // Use environment variable or fallback to local URL
 
 // Set up MongoDB connection
 mongoose.connect(mongoURL, {

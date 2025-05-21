@@ -43,3 +43,31 @@ dotenv : the dotenv module in NodeJs is used to manage configuration variables a
           npm install dotenv
           - create a .env file 
           - format : var_name = value:
+        
+Middleware : it's something that happens in between our requests and final response in a web application
+1. Authentication: "Who are you?"
+                    It is the process of verifying a user's identity — making sure the user is who they say they are.
+2. Authorization: "What are you allowed to do?"
+                    After authentication, authorization determines what actions or resources the user has access to.
+        
+    * We will implement Authentication as a middleware function . So that , Routes will be authenticated before reaching out to the server
+
+Passport.js : 
+        Passport.js is a popular authentication middleware for Node.js . Authentication is the process of verifying  the identity of a user , typically through a username and password , before granting access to certain resources or features on a website or app.
+        To use passport.js in a Node.js app, we need to install the passport package along with the authentication strategies we intend to use .
+        [npm install passport passport-local]
+
+* Storing plain password is not a secure practice. To enhance security , it's highly recommended to hash and salt password before storing them.
+* We can use the bcrypt library for password hashing in our Node.js application
+        [npm install bcrypt]
+
+    PASSWORD HASH SALTING
+user password              salt added       hashing Algo               hashed PW + Salt
+Apple                   Apple + jsdv        hashing Process         shdjcbkjasnlhouahslnklsibakjsdkjba
+
+* Now we have to update our person model to store hashed passwords. Modify the registration logic to hash the password before saving it to the database.
+* Because the end user didn't know the about hashing, we have to internally maintain it. Like we are saving the hashed password before saving it into the database
+* We are using a Mongoose schema middleware hoot to perform an action before saving a document to the database. Specifically, it's using the pre middleware to excute a function before the save operation.
+
+
+
